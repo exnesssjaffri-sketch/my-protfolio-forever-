@@ -64,14 +64,7 @@ const menuData = [
         image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&q=80'
     },
     // ---- Drinks ----
-    {
-        id: 7,
-        name: 'Chai (Masala Tea)',
-        category: 'drinks',
-        description: 'Our signature spiced milk tea — the most beloved beverage at Jaffeiz. A must-try!',
-        price: 150,
-        image: 'https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80'
-    },
+    // (Removed spicy / masala drinks per request)
     {
         id: 8,
         name: 'Espresso',
@@ -111,6 +104,39 @@ const menuData = [
         description: 'Decadent chocolate milkshake topped with whipped cream and shavings.',
         price: 400,
         image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
+    }
+    ,
+    {
+        id: 13,
+        name: 'Vanilla Ice Cream Shake',
+        category: 'drinks',
+        description: 'Creamy vanilla ice cream blended with milk for a smooth, classic shake.',
+        price: 350,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
+    },
+    {
+        id: 14,
+        name: 'Strawberry Ice Cream Shake',
+        category: 'drinks',
+        description: 'Fresh strawberry ice cream shaken with milk and a touch of sweetness.',
+        price: 380,
+        image: 'https://images.unsplash.com/photo-1505253758479-34fbd9f1a0d9?w=400&q=80'
+    },
+    {
+        id: 15,
+        name: 'Mango Ice Cream Float',
+        category: 'drinks',
+        description: 'Mango ice cream served in chilled soda — a fruity, creamy float.',
+        price: 420,
+        image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80'
+    },
+    {
+        id: 16,
+        name: 'Kulfi Cream',
+        category: 'drinks',
+        description: 'Traditional kulfi-inspired creamy drink with pistachio and cardamom notes.',
+        price: 450,
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
     }
 ];
 
