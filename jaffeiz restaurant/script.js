@@ -12,7 +12,7 @@
 // 1. DATA — Menu Items & Reviews
 // ================================================================
 
-/** Array of menu items for the categorized menu (affordable PKR prices) */
+/** Array of menu items for the categorized menu */
 const menuData = [
     // ---- Pakistani Meals ----
     {
@@ -20,7 +20,7 @@ const menuData = [
         name: 'Chicken Biryani',
         category: 'pakistani',
         description: 'Fragrant basmati rice layered with tender chicken, aromatic spices, and saffron.',
-        price: 650,
+        price: 12.99,
         image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80'
     },
     {
@@ -28,7 +28,7 @@ const menuData = [
         name: 'Beef Korma',
         category: 'pakistani',
         description: 'Slow-cooked tender beef in a rich, creamy yogurt and cashew gravy.',
-        price: 750,
+        price: 14.99,
         image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80'
     },
     {
@@ -36,7 +36,7 @@ const menuData = [
         name: 'Chicken Karahi',
         category: 'pakistani',
         description: 'Sizzling wok-cooked chicken with tomatoes, ginger, and green chilies.',
-        price: 700,
+        price: 13.99,
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80'
     },
     {
@@ -44,7 +44,7 @@ const menuData = [
         name: 'Lamb Pulao',
         category: 'pakistani',
         description: 'Fragrant rice with tender lamb, caramelized onions, and warm spices.',
-        price: 800,
+        price: 15.99,
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80'
     },
     {
@@ -52,7 +52,7 @@ const menuData = [
         name: 'Daal Chawal',
         category: 'pakistani',
         description: 'Comforting lentils simmered with garlic and cumin, served over steamed rice.',
-        price: 400,
+        price: 8.99,
         image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80'
     },
     {
@@ -60,7 +60,7 @@ const menuData = [
         name: 'Seekh Kebab',
         category: 'pakistani',
         description: 'Spiced minced meat skewers grilled to perfection on the tandoor.',
-        price: 550,
+        price: 11.99,
         image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&q=80'
     },
     // ---- Drinks ----
@@ -69,7 +69,7 @@ const menuData = [
         name: 'Chai (Masala Tea)',
         category: 'drinks',
         description: 'Our signature spiced milk tea — the most beloved beverage at Jaffeiz. A must-try!',
-        price: 150,
+        price: 3.99,
         image: 'https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80'
     },
     {
@@ -77,7 +77,7 @@ const menuData = [
         name: 'Espresso',
         category: 'drinks',
         description: 'Rich, bold single-origin espresso shot. Pure energy in a cup.',
-        price: 200,
+        price: 2.99,
         image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80'
     },
     {
@@ -85,7 +85,7 @@ const menuData = [
         name: 'Cappuccino',
         category: 'drinks',
         description: 'Velvety espresso with steamed milk foam and a dusting of cocoa.',
-        price: 300,
+        price: 4.49,
         image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80'
     },
     {
@@ -93,7 +93,7 @@ const menuData = [
         name: 'Latte',
         category: 'drinks',
         description: 'Smooth espresso with creamy steamed milk. Available in vanilla or caramel.',
-        price: 350,
+        price: 4.99,
         image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80'
     },
     {
@@ -101,7 +101,7 @@ const menuData = [
         name: 'Mango Milkshake',
         category: 'drinks',
         description: 'Thick, creamy milkshake made with fresh Alphonso mangoes.',
-        price: 400,
+        price: 5.99,
         image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
     },
     {
@@ -109,7 +109,7 @@ const menuData = [
         name: 'Chocolate Milkshake',
         category: 'drinks',
         description: 'Decadent chocolate milkshake topped with whipped cream and shavings.',
-        price: 400,
+        price: 5.99,
         image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
     }
 ];
@@ -164,7 +164,7 @@ window.addEventListener('load', () => {
 });
 
 // ================================================================
-// 3. PARTICLE BACKGROUND (Canvas) — Enhanced
+// 3. PARTICLE BACKGROUND (Canvas)
 // ================================================================
 
 function initParticles() {
@@ -191,22 +191,16 @@ function initParticles() {
         reset() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 4 + 1;
-            this.speedX = (Math.random() - 0.5) * 0.6;
-            this.speedY = (Math.random() - 0.5) * 0.6;
-            this.opacity = Math.random() * 0.6 + 0.1;
-            this.pulse = Math.random() * 0.02 + 0.01;
-            this.pulseDir = 1;
-            this.color = `rgba(212, 175, 55, ${this.opacity})`;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = (Math.random() - 0.5) * 0.5;
+            this.speedY = (Math.random() - 0.5) * 0.5;
+            this.opacity = Math.random() * 0.5 + 0.1;
+            this.color = `rgba(193, 154, 43, ${this.opacity})`;
         }
 
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-
-            // Pulse size for micro interaction
-            this.size += this.pulse * this.pulseDir;
-            if (this.size > 5 || this.size < 1) this.pulseDir *= -1;
 
             // Wrap around edges
             if (this.x < 0) this.x = canvas.width;
@@ -224,7 +218,7 @@ function initParticles() {
     }
 
     // Create particles based on screen size
-    const particleCount = Math.min(Math.floor(canvas.width * canvas.height / 12000), 120);
+    const particleCount = Math.min(Math.floor(canvas.width * canvas.height / 15000), 100);
 
     for (let i = 0; i < particleCount; i++) {
         particles.push(new Particle());
@@ -239,11 +233,11 @@ function initParticles() {
                 const distance = Math.sqrt(dx * dx + dy * dy);
 
                 if (distance < 150) {
-                    const opacity = (1 - distance / 150) * 0.2;
+                    const opacity = (1 - distance / 150) * 0.15;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(212, 175, 55, ${opacity})`;
+                    ctx.strokeStyle = `rgba(193, 154, 43, ${opacity})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
@@ -266,11 +260,15 @@ function initParticles() {
 
     animate();
 
+    // Cleanup on page unload
     window.addEventListener('beforeunload', () => {
-        if (animationId) cancelAnimationFrame(animationId);
+        if (animationId) {
+            cancelAnimationFrame(animationId);
+        }
     });
 }
 
+// Initialize particles after DOM is ready
 document.addEventListener('DOMContentLoaded', initParticles);
 
 // ================================================================
@@ -288,18 +286,24 @@ function initTypingEffect() {
 
     function type() {
         if (!isDeleting) {
+            // Typing forward
             headingEl.textContent = text.slice(0, index);
             index++;
+
             if (index > text.length) {
+                // Pause at the end, then start deleting
                 isDeleting = true;
-                speed = 40;
-                setTimeout(type, 2000);
+                speed = 40; // Faster when deleting
+                setTimeout(type, 2000); // Pause before deleting
                 return;
             }
         } else {
+            // Deleting backward
             headingEl.textContent = text.slice(0, index);
             index--;
+
             if (index < 0) {
+                // Reset and start over
                 isDeleting = false;
                 index = 0;
                 speed = 80;
@@ -307,9 +311,11 @@ function initTypingEffect() {
                 return;
             }
         }
+
         setTimeout(type, speed);
     }
 
+    // Start typing after loading screen
     setTimeout(type, 2500);
 }
 
@@ -325,6 +331,7 @@ function initNavigation() {
     const navLinks = document.getElementById('nav-links');
     const navLinkItems = document.querySelectorAll('.nav-link');
 
+    // Sticky nav on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 100) {
             navbar.classList.add('scrolled');
@@ -333,6 +340,7 @@ function initNavigation() {
         }
     });
 
+    // Mobile menu toggle
     if (navToggle) {
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
@@ -340,6 +348,7 @@ function initNavigation() {
         });
     }
 
+    // Close mobile menu on link click
     navLinkItems.forEach(link => {
         link.addEventListener('click', () => {
             navToggle.classList.remove('active');
@@ -347,6 +356,7 @@ function initNavigation() {
         });
     });
 
+    // Active link highlighting based on scroll position
     const sections = document.querySelectorAll('section[id]');
 
     function highlightNav() {
@@ -358,6 +368,7 @@ function initNavigation() {
                 current = section.getAttribute('id');
             }
         });
+
         navLinkItems.forEach(link => {
             link.classList.remove('active');
             if (link.getAttribute('href') === `#${current}`) {
@@ -378,11 +389,15 @@ document.addEventListener('DOMContentLoaded', initNavigation);
 function initPromoBanner() {
     const promoBanner = document.getElementById('promo-banner');
     const promoClose = document.getElementById('promo-close');
+
     if (promoClose && promoBanner) {
         promoClose.addEventListener('click', () => {
             promoBanner.classList.add('hidden');
+            // Adjust navbar top padding since banner is gone
             const navbar = document.getElementById('navbar');
-            if (navbar) navbar.style.top = '0';
+            if (navbar) {
+                navbar.style.top = '0';
+            }
         });
     }
 }
@@ -396,10 +411,12 @@ document.addEventListener('DOMContentLoaded', initPromoBanner);
 function initMenu() {
     const menuGrid = document.getElementById('menu-grid');
     const filterBtns = document.querySelectorAll('.filter-btn');
+
     if (!menuGrid) return;
 
     let currentFilter = 'all';
 
+    /** Render menu items based on active filter */
     function renderMenu(filter) {
         const filtered = filter === 'all'
             ? menuData
@@ -411,9 +428,6 @@ function initMenu() {
             const card = document.createElement('div');
             card.className = 'menu-item';
             card.style.animationDelay = `${index * 0.1}s`;
-            card.dataset.id = item.id;
-
-            const priceFormatted = 'Rs. ' + item.price.toLocaleString('en-PK');
 
             card.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="menu-item-image" loading="lazy" />
@@ -422,19 +436,16 @@ function initMenu() {
                     <p class="menu-item-category">${item.category === 'pakistani' ? 'Pakistani Meal' : 'Drink'}</p>
                     <p class="menu-item-description">${item.description}</p>
                     <div class="menu-item-footer">
-                        <span class="menu-item-price">${priceFormatted}</span>
+                        <span class="menu-item-price">$${item.price.toFixed(2)}</span>
                         <button class="add-to-cart-btn" data-id="${item.id}">Add to Cart</button>
                     </div>
                 </div>
             `;
 
-            card.addEventListener('click', () => {
-                openMealModal(item.id);
-            });
-
             menuGrid.appendChild(card);
         });
 
+        // Attach add-to-cart event listeners to new buttons
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -444,8 +455,10 @@ function initMenu() {
         });
     }
 
+    // Initial render
     renderMenu('all');
 
+    // Filter button click handlers
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -459,131 +472,6 @@ function initMenu() {
 document.addEventListener('DOMContentLoaded', initMenu);
 
 // ================================================================
-// 7.5 MEAL DETAIL MODAL
-// ================================================================
-
-let currentMealId = null;
-
-const extrasPricing = {
-    'extra-cheese': 100,
-    'extra-meat': 200,
-    'extra-sauce': 50,
-    'salad': 150
-};
-
-function formatPKR(amount) {
-    return 'Rs. ' + Math.round(amount).toLocaleString('en-PK');
-}
-
-function openMealModal(id) {
-    const meal = findMenuItem(id);
-    if (!meal) return;
-    currentMealId = id;
-    const modal = document.getElementById('meal-modal');
-    if (!modal) return;
-
-    document.getElementById('meal-qty').value = 1;
-    document.getElementById('meal-special-instructions').value = '';
-    document.querySelector('input[name="spice-level"][value="medium"]').checked = true;
-    document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]').forEach(cb => { cb.checked = false; });
-
-    document.getElementById('meal-modal-img').src = meal.image;
-    document.getElementById('meal-modal-img').alt = meal.name;
-    document.getElementById('meal-modal-name').textContent = meal.name;
-    document.getElementById('meal-modal-category').textContent = meal.category === 'pakistani' ? 'Pakistani Meal' : 'Drink';
-    document.getElementById('meal-modal-price').textContent = formatPKR(meal.price);
-    document.getElementById('meal-modal-desc').textContent = meal.description;
-
-    updateMealModalTotal();
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-}
-
-function closeMealModal() {
-    const modal = document.getElementById('meal-modal');
-    if (modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-    }
-    currentMealId = null;
-}
-
-function updateMealModalTotal() {
-    const meal = findMenuItem(currentMealId);
-    if (!meal) return;
-    const qty = parseInt(document.getElementById('meal-qty').value) || 1;
-    let extrasTotal = 0;
-    document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]:checked').forEach(cb => {
-        extrasTotal += extrasPricing[cb.value] || 0;
-    });
-    const total = (meal.price + extrasTotal) * qty;
-    document.getElementById('meal-modal-total-price').textContent = formatPKR(total);
-}
-
-function addMealToCart() {
-    if (!currentMealId) return;
-    const meal = findMenuItem(currentMealId);
-    if (!meal) return;
-
-    const qty = parseInt(document.getElementById('meal-qty').value) || 1;
-    const spiceLevel = document.querySelector('input[name="spice-level"]:checked');
-    const spice = spiceLevel ? spiceLevel.value : 'medium';
-    const extras = [];
-    document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]:checked').forEach(cb => {
-        extras.push(cb.value);
-    });
-    const instructions = document.getElementById('meal-special-instructions').value.trim();
-    let extrasTotal = 0;
-    extras.forEach(ext => { extrasTotal += extrasPricing[ext] || 0; });
-
-    for (let i = 0; i < qty; i++) {
-        const existing = cart.find(item => item.id === currentMealId && item.spice === spice && item.instructions === instructions && JSON.stringify(item.extras) === JSON.stringify(extras));
-        if (existing) {
-            existing.quantity += 1;
-        } else {
-            cart.push({
-                id: currentMealId, name: meal.name, price: meal.price + extrasTotal, quantity: 1,
-                spice: spice, extras: extras, instructions: instructions
-            });
-        }
-    }
-    updateCartUI();
-    closeMealModal();
-    showAddFeedback();
-}
-
-function initMealModal() {
-    const closeBtn = document.getElementById('meal-modal-close');
-    if (closeBtn) closeBtn.addEventListener('click', closeMealModal);
-    const modal = document.getElementById('meal-modal');
-    if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeMealModal(); });
-
-    const minusBtn = document.getElementById('meal-qty-minus');
-    const plusBtn = document.getElementById('meal-qty-plus');
-    const qtyInput = document.getElementById('meal-qty');
-
-    if (minusBtn) minusBtn.addEventListener('click', () => {
-        let val = parseInt(qtyInput.value) || 1;
-        if (val > 1) { qtyInput.value = val - 1; updateMealModalTotal(); }
-    });
-    if (plusBtn) plusBtn.addEventListener('click', () => {
-        let val = parseInt(qtyInput.value) || 1;
-        if (val < 20) { qtyInput.value = val + 1; updateMealModalTotal(); }
-    });
-
-    document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]').forEach(cb => {
-        cb.addEventListener('change', updateMealModalTotal);
-    });
-
-    const addBtn = document.getElementById('meal-modal-add-btn');
-    if (addBtn) addBtn.addEventListener('click', addMealToCart);
-
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMealModal(); });
-}
-
-document.addEventListener('DOMContentLoaded', initMealModal);
-
-// ================================================================
 // 8. SHOPPING CART SYSTEM
 // ================================================================
 
@@ -591,63 +479,88 @@ let cart = [];
 let couponApplied = false;
 let discountPercent = 0;
 
+/** Find a menu item by ID */
 function findMenuItem(id) {
     return menuData.find(item => item.id === id);
 }
 
+/** Add item to cart */
 function addToCart(id) {
     const existing = cart.find(item => item.id === id);
+
     if (existing) {
         existing.quantity += 1;
     } else {
         const menuItem = findMenuItem(id);
         if (menuItem) {
-            cart.push({ id: menuItem.id, name: menuItem.name, price: menuItem.price, quantity: 1 });
+            cart.push({
+                id: menuItem.id,
+                name: menuItem.name,
+                price: menuItem.price,
+                quantity: 1
+            });
         }
     }
+
     updateCartUI();
     showAddFeedback();
 }
 
+/** Show a brief visual feedback when item is added */
 function showAddFeedback() {
     const checkoutBtn = document.getElementById('checkout-btn');
     if (checkoutBtn) {
         checkoutBtn.textContent = '✓ Item Added!';
-        setTimeout(() => { checkoutBtn.textContent = 'Proceed to Checkout'; }, 1000);
+        setTimeout(() => {
+            checkoutBtn.textContent = 'Proceed to Checkout';
+        }, 1000);
     }
 }
 
+/** Remove item from cart */
 function removeFromCart(id) {
     cart = cart.filter(item => item.id !== id);
     updateCartUI();
 }
 
+/** Update item quantity */
 function updateQuantity(id, delta) {
     const item = cart.find(i => i.id === id);
     if (item) {
         item.quantity += delta;
-        if (item.quantity <= 0) { removeFromCart(id); return; }
+        if (item.quantity <= 0) {
+            removeFromCart(id);
+            return;
+        }
     }
     updateCartUI();
 }
 
+/** Calculate cart total */
 function getCartTotal() {
     const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    if (couponApplied && discountPercent > 0) return subtotal * (1 - discountPercent / 100);
+    if (couponApplied && discountPercent > 0) {
+        return subtotal * (1 - discountPercent / 100);
+    }
     return subtotal;
 }
 
+/** Update the cart UI */
 function updateCartUI() {
     const cartItems = document.getElementById('cart-items');
     const totalPrice = document.getElementById('total-price');
     const checkoutBtn = document.getElementById('checkout-btn');
     const cartCount = document.querySelectorAll('.cart-count');
+
     if (!cartItems) return;
 
     if (cart.length === 0) {
         cartItems.innerHTML = '<p class="cart-empty">Your cart is empty. Start adding delicious meals!</p>';
-        totalPrice.textContent = 'Rs. 0';
-        if (checkoutBtn) checkoutBtn.disabled = true;
+        totalPrice.textContent = '$0.00';
+        if (checkoutBtn) {
+            checkoutBtn.disabled = true;
+        }
+        // Update any cart count badges
         cartCount.forEach(el => el.textContent = '0');
         return;
     }
@@ -658,11 +571,11 @@ function updateCartUI() {
             <div class="cart-item">
                 <span class="cart-item-name">${item.name}</span>
                 <div class="cart-item-qty">
-                    <button class="qty-btn" data-id="${item.id}" data-delta="-1">\u2212</button>
+                    <button class="qty-btn" data-id="${item.id}" data-delta="-1">−</button>
                     <span>${item.quantity}</span>
                     <button class="qty-btn" data-id="${item.id}" data-delta="1">+</button>
                 </div>
-                <span class="cart-item-price">${formatPKR(item.price * item.quantity)}</span>
+                <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
                 <button class="cart-item-remove" data-id="${item.id}">&times;</button>
             </div>
         `;
@@ -670,6 +583,7 @@ function updateCartUI() {
 
     cartItems.innerHTML = html;
 
+    // Attach quantity button events
     document.querySelectorAll('.qty-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             const id = parseInt(btn.dataset.id);
@@ -678,6 +592,7 @@ function updateCartUI() {
         });
     });
 
+    // Attach remove button events
     document.querySelectorAll('.cart-item-remove').forEach(btn => {
         btn.addEventListener('click', () => {
             const id = parseInt(btn.dataset.id);
@@ -685,10 +600,16 @@ function updateCartUI() {
         });
     });
 
+    // Update total
     const total = getCartTotal();
-    totalPrice.textContent = formatPKR(total);
-    if (checkoutBtn) checkoutBtn.disabled = false;
+    totalPrice.textContent = `$${total.toFixed(2)}`;
 
+    // Enable checkout
+    if (checkoutBtn) {
+        checkoutBtn.disabled = false;
+    }
+
+    // Update cart count badges
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCount.forEach(el => el.textContent = totalItems);
 }
@@ -701,27 +622,34 @@ function initCouponSystem() {
     const couponInput = document.getElementById('coupon-input');
     const applyBtn = document.getElementById('apply-coupon');
     const couponMessage = document.getElementById('coupon-message');
+
     if (!applyBtn || !couponInput) return;
 
     applyBtn.addEventListener('click', () => {
         const code = couponInput.value.trim().toUpperCase();
+
         if (code === 'FIFA2026') {
             couponApplied = true;
             discountPercent = 20;
-            couponMessage.textContent = '\u2705 Coupon applied! You get 20% OFF!';
+            couponMessage.textContent = '✅ Coupon applied! You get 20% OFF!';
             couponMessage.className = 'coupon-message success';
             couponInput.value = '';
             updateCartUI();
         } else {
             couponApplied = false;
             discountPercent = 0;
-            couponMessage.textContent = '\u274C Invalid coupon code. Please try again.';
+            couponMessage.textContent = '❌ Invalid coupon code. Please try again.';
             couponMessage.className = 'coupon-message error';
             updateCartUI();
         }
     });
 
-    couponInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') applyBtn.click(); });
+    // Allow pressing Enter to apply coupon
+    couponInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            applyBtn.click();
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', initCouponSystem);
@@ -745,22 +673,37 @@ function initBooking() {
     let selectedType = null;
     let bookingData = {};
 
+    // ---- Select booking type ----
     bookingTypeCards.forEach(card => {
         card.addEventListener('click', () => {
             bookingTypeCards.forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
+
             selectedType = card.dataset.type;
             bookingTypeInput.value = selectedType;
+
+            // Show booking form
             bookingFormWrapper.style.display = 'block';
             billingFormWrapper.style.display = 'none';
-            bookingFormTitle.textContent = selectedType === 'family' ? 'Book Your Family Feast' : 'Book Your Romantic Dinner';
+
+            // Update form title
+            if (selectedType === 'family') {
+                bookingFormTitle.textContent = 'Book Your Family Feast';
+            } else {
+                bookingFormTitle.textContent = 'Book Your Romantic Dinner';
+            }
+
+            // Scroll to form
             bookingFormWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
+    // ---- Booking form submit -> Show billing ----
     if (bookingForm) {
         bookingForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Gather booking data
             bookingData = {
                 type: selectedType,
                 name: document.getElementById('book-name').value.trim(),
@@ -771,23 +714,32 @@ function initBooking() {
                 phone: document.getElementById('book-phone').value.trim(),
                 special: document.getElementById('book-special').value.trim()
             };
+
+            // Basic validation
             if (!bookingData.name || !bookingData.email || !bookingData.date || !bookingData.time) {
                 alert('Please fill in all required fields.');
                 return;
             }
+
+            // Populate billing summary
             const typeLabel = selectedType === 'family' ? 'Family Feast' : 'Romantic Couple';
-            const totalAmount = selectedType === 'family' ? 4999 : 3999;
+            const totalAmount = selectedType === 'family' ? 49.99 : 39.99;
+
             document.getElementById('billing-summary-type').textContent = typeLabel;
             document.getElementById('billing-summary-date').textContent = `${bookingData.date} at ${bookingData.time}`;
             document.getElementById('billing-summary-guests').textContent = bookingData.guests;
-            document.getElementById('billing-summary-total').textContent = formatPKR(totalAmount);
-            document.getElementById('billing-amount').textContent = totalAmount.toLocaleString('en-PK');
+            document.getElementById('billing-summary-total').textContent = `$${totalAmount.toFixed(2)}`;
+            document.getElementById('billing-amount').textContent = totalAmount.toFixed(2);
+
+            // Show billing form
             bookingFormWrapper.style.display = 'none';
             billingFormWrapper.style.display = 'block';
+
             billingFormWrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
 
+    // ---- Billing back button ----
     if (billingBack) {
         billingBack.addEventListener('click', () => {
             billingFormWrapper.style.display = 'none';
@@ -796,30 +748,42 @@ function initBooking() {
         });
     }
 
+    // ---- Billing form submit -> Success modal ----
     if (billingForm) {
         billingForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            if (successModal) successModal.style.display = 'flex';
+
+            // Show success modal
+            if (successModal) {
+                successModal.style.display = 'flex';
+            }
         });
     }
 
+    // ---- Close modal ----
     if (modalClose) {
         modalClose.addEventListener('click', () => {
-            if (successModal) successModal.style.display = 'none';
+            if (successModal) {
+                successModal.style.display = 'none';
+            }
+            // Reset booking flow
             bookingTypeCards.forEach(c => c.classList.remove('selected'));
             bookingFormWrapper.style.display = 'none';
             billingFormWrapper.style.display = 'none';
             bookingForm.reset();
             billingForm.reset();
             selectedType = null;
+            // Scroll to top of booking section
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
         });
     }
 
+    // Close modal on overlay click
     if (successModal) {
         successModal.addEventListener('click', (e) => {
             if (e.target === successModal) {
                 successModal.style.display = 'none';
+                // Reset
                 bookingTypeCards.forEach(c => c.classList.remove('selected'));
                 bookingFormWrapper.style.display = 'none';
                 billingFormWrapper.style.display = 'none';
@@ -830,11 +794,13 @@ function initBooking() {
         });
     }
 
+    // ---- Credit card formatting ----
     const cardInput = document.getElementById('billing-card');
     if (cardInput) {
         cardInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 16) value = value.slice(0, 16);
+            // Add spaces every 4 digits
             value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
             e.target.value = value;
         });
@@ -845,7 +811,9 @@ function initBooking() {
         expiryInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 4) value = value.slice(0, 4);
-            if (value.length > 2) value = value.slice(0, 2) + '/' + value.slice(2);
+            if (value.length > 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2);
+            }
             e.target.value = value;
         });
     }
@@ -871,14 +839,18 @@ function initReviews() {
     const prevBtn = document.getElementById('review-prev');
     const nextBtn = document.getElementById('review-next');
     const dotsContainer = document.getElementById('review-dots');
+
     if (!track) return;
 
     let currentIndex = 0;
 
+    // Render reviews
     reviewsData.forEach((review, index) => {
         const card = document.createElement('div');
         card.className = 'review-card';
-        const starsHtml = '\u2605'.repeat(review.stars) + '\u2606'.repeat(5 - review.stars);
+
+        const starsHtml = '★'.repeat(review.stars) + '☆'.repeat(5 - review.stars);
+
         card.innerHTML = `
             <img src="${review.avatar}" alt="${review.name}" class="review-avatar" loading="lazy" />
             <h3 class="review-name">${review.name}</h3>
@@ -886,9 +858,11 @@ function initReviews() {
             <div class="review-stars">${starsHtml}</div>
             <p class="review-text">${review.text}</p>
         `;
+
         track.appendChild(card);
     });
 
+    // Create dots
     reviewsData.forEach((_, index) => {
         const dot = document.createElement('button');
         dot.className = `review-dot ${index === 0 ? 'active' : ''}`;
@@ -903,22 +877,36 @@ function initReviews() {
         currentIndex = index;
         if (currentIndex < 0) currentIndex = totalSlides - 1;
         if (currentIndex >= totalSlides) currentIndex = 0;
+
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Update dots
         document.querySelectorAll('.review-dot').forEach((dot, i) => {
             dot.classList.toggle('active', i === currentIndex);
         });
     }
 
-    if (prevBtn) prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-    if (nextBtn) nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    }
 
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    }
+
+    // Auto-advance carousel every 5 seconds
     let autoAdvance = setInterval(() => goToSlide(currentIndex + 1), 5000);
+
+    // Pause on hover
     const carousel = document.querySelector('.reviews-carousel');
     if (carousel) {
         carousel.addEventListener('mouseenter', () => clearInterval(autoAdvance));
-        carousel.addEventListener('mouseleave', () => { autoAdvance = setInterval(() => goToSlide(currentIndex + 1), 5000); });
+        carousel.addEventListener('mouseleave', () => {
+            autoAdvance = setInterval(() => goToSlide(currentIndex + 1), 5000);
+        });
     }
 
+    // Keyboard navigation
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
         if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
@@ -933,13 +921,20 @@ document.addEventListener('DOMContentLoaded', initReviews);
 
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-in, .slide-up');
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Optionally stop observing after animation
+                // observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
     animatedElements.forEach(el => observer.observe(el));
 }
 
@@ -951,11 +946,16 @@ document.addEventListener('DOMContentLoaded', initScrollAnimations);
 
 function initCheckoutButton() {
     const checkoutBtn = document.getElementById('checkout-btn');
+
     if (checkoutBtn) {
         checkoutBtn.addEventListener('click', () => {
             if (cart.length === 0) return;
+
+            // Scroll to booking section
             const bookingSection = document.getElementById('booking');
-            if (bookingSection) bookingSection.scrollIntoView({ behavior: 'smooth' });
+            if (bookingSection) {
+                bookingSection.scrollIntoView({ behavior: 'smooth' });
+            }
         });
     }
 }
@@ -971,6 +971,7 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href === '#') return;
+
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
@@ -981,118 +982,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================================================================
-// 15. MOUSE FOLLOWER EFFECT
+// 15. CONSOLE WELCOME MESSAGE
 // ================================================================
 
-function initMouseFollower() {
-    const follower = document.createElement('div');
-    follower.className = 'mouse-follower';
-    document.body.appendChild(follower);
-
-    let mouseX = 0, mouseY = 0;
-    let followerX = 0, followerY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    function animate() {
-        followerX += (mouseX - followerX) * 0.1;
-        followerY += (mouseY - followerY) * 0.1;
-        follower.style.transform = `translate(${followerX - 12}px, ${followerY - 12}px)`;
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    // Hide on touch devices
-    if ('ontouchstart' in window) {
-        follower.style.display = 'none';
-    }
-}
-
-document.addEventListener('DOMContentLoaded', initMouseFollower);
-
-// ================================================================
-// 16. ANIMATED COUNTERS
-// ================================================================
-
-function initAnimatedCounters() {
-    const counters = document.querySelectorAll('.animated-counter');
-    if (!counters.length) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseInt(el.dataset.target);
-                const duration = parseInt(el.dataset.duration) || 2000;
-                const suffix = el.dataset.suffix || '';
-                const step = Math.max(1, Math.floor(target / (duration / 16)));
-
-                let current = 0;
-                const timer = setInterval(() => {
-                    current += step;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    el.textContent = current.toLocaleString('en-PK') + suffix;
-                }, 16);
-
-                observer.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    counters.forEach(el => observer.observe(el));
-}
-
-document.addEventListener('DOMContentLoaded', initAnimatedCounters);
-
-// ================================================================
-// 17. BUTTON RIPPLE EFFECT (Micro Interaction)
-// ================================================================
-
-function initRippleEffect() {
-    document.querySelectorAll('.btn, .filter-btn, .add-to-cart-btn').forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            const ripple = document.createElement('span');
-            ripple.className = 'ripple-effect';
-            const rect = this.getBoundingClientRect();
-            const size = Math.max(rect.width, rect.height);
-            ripple.style.width = ripple.style.height = `${size}px`;
-            ripple.style.left = `${e.clientX - rect.left - size / 2}px`;
-            ripple.style.top = `${e.clientY - rect.top - size / 2}px`;
-            this.appendChild(ripple);
-            setTimeout(() => ripple.remove(), 600);
-        });
-    });
-}
-
-document.addEventListener('DOMContentLoaded', initRippleEffect);
-
-// ================================================================
-// 18. PULSE ANIMATION ON HERO CTA
-// ================================================================
-
-function initPulseAnimation() {
-    const heroCta = document.querySelector('.hero-cta .btn-primary');
-    if (heroCta) {
-        setInterval(() => {
-            heroCta.classList.add('pulse-animation');
-            setTimeout(() => heroCta.classList.remove('pulse-animation'), 2000);
-        }, 5000);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', initPulseAnimation);
-
-// ================================================================
-// 19. CONSOLE WELCOME MESSAGE
-// ================================================================
-
-console.log('%c\uD83C\uDF7D\uFE0F Jaffeiz Restaurant', 'font-size: 24px; font-weight: bold; color: #c19a2b;');
+console.log('%c🍽️ Jaffeiz Restaurant', 'font-size: 24px; font-weight: bold; color: #c19a2b;');
 console.log('%cA World of Flavor Awaits Since 2010.', 'font-size: 14px; color: #aaa;');
-console.log('%cBuilt with \u2764\uFE0F using HTML, CSS & Vanilla JS', 'font-size: 12px; color: #666;');
+console.log('%cBuilt with ❤️ using HTML, CSS & Vanilla JS', 'font-size: 12px; color: #666;');
