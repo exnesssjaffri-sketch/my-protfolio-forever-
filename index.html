@@ -93,6 +93,8 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="pakistani">Pakistani Meals</button>
                 <button class="filter-btn" data-filter="drinks">Drinks</button>
+                <button class="filter-btn" data-filter="ice-cream">Ice Creams</button>
+                <button class="filter-btn" data-filter="chai">Chai</button>
             </div>
 
             <!-- Menu Grid -->
@@ -433,6 +435,15 @@
                                 <button class="qty-selector-btn" id="meal-qty-minus">−</button>
                                 <input type="number" id="meal-qty" value="1" min="1" max="20" readonly />
                                 <button class="qty-selector-btn" id="meal-qty-plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="customization-group" id="size-selector-group">
+                            <label for="meal-size">Select Size</label>
+                            <div class="size-options">
+                                <select id="meal-size" class="size-select">
+                                    <option value="0">Regular</option>
+                                </select>
                             </div>
                         </div>
 

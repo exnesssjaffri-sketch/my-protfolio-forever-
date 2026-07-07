@@ -63,15 +63,19 @@ const menuData = [
         price: 550,
         image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&q=80'
     },
-    // ---- Drinks ----
-    // (Removed spicy / masala drinks per request)
+    // ---- Drinks (Soft flavors, no spicy, no chai) ----
     {
         id: 8,
         name: 'Espresso',
         category: 'drinks',
-        description: 'Rich, bold single-origin espresso shot. Pure energy in a cup.',
+        description: 'Rich, bold single-origin espresso shot. Smooth and energizing.',
         price: 200,
-        image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 9,
@@ -79,7 +83,12 @@ const menuData = [
         category: 'drinks',
         description: 'Velvety espresso with steamed milk foam and a dusting of cocoa.',
         price: 300,
-        image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 10,
@@ -87,32 +96,51 @@ const menuData = [
         category: 'drinks',
         description: 'Smooth espresso with creamy steamed milk. Available in vanilla or caramel.',
         price: 350,
-        image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 11,
         name: 'Mango Milkshake',
         category: 'drinks',
-        description: 'Thick, creamy milkshake made with fresh Alphonso mangoes.',
+        description: 'Thick, creamy milkshake made with fresh Alphonso mangoes. Sweet and refreshing.',
         price: 400,
-        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 12,
         name: 'Chocolate Milkshake',
         category: 'drinks',
-        description: 'Decadent chocolate milkshake topped with whipped cream and shavings.',
+        description: 'Decadent chocolate milkshake topped with whipped cream and chocolate shavings.',
         price: 400,
-        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
-    }
-    ,
+        image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
+    },
     {
         id: 13,
         name: 'Vanilla Ice Cream Shake',
         category: 'drinks',
         description: 'Creamy vanilla ice cream blended with milk for a smooth, classic shake.',
         price: 350,
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 14,
@@ -120,7 +148,12 @@ const menuData = [
         category: 'drinks',
         description: 'Fresh strawberry ice cream shaken with milk and a touch of sweetness.',
         price: 380,
-        image: 'https://images.unsplash.com/photo-1505253758479-34fbd9f1a0d9?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1505253758479-34fbd9f1a0d9?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 15,
@@ -128,7 +161,12 @@ const menuData = [
         category: 'drinks',
         description: 'Mango ice cream served in chilled soda — a fruity, creamy float.',
         price: 420,
-        image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
     },
     {
         id: 16,
@@ -136,7 +174,222 @@ const menuData = [
         category: 'drinks',
         description: 'Traditional kulfi-inspired creamy drink with pistachio and cardamom notes.',
         price: 450,
-        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
+        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80',
+        sizes: [
+            { name: 'Small (250ml)', priceModifier: 0 },
+            { name: 'Medium (350ml)', priceModifier: 100 },
+            { name: 'Large (500ml)', priceModifier: 200 }
+        ]
+    },
+    // ---- Ice Creams (Kulfa, Cones, Bars, Jars) ----
+    {
+        id: 17,
+        name: 'Pista Kulfa',
+        category: 'ice-cream',
+        description: 'Creamy pistachio kulfa with crushed nuts and saffron drizzle.',
+        price: 250,
+        image: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80',
+        sizes: [
+            { name: 'Single Scoop', priceModifier: 0 },
+            { name: 'Double Scoop', priceModifier: 150 },
+            { name: 'Triple Scoop', priceModifier: 300 }
+        ]
+    },
+    {
+        id: 18,
+        name: 'Mango Kulfa',
+        category: 'ice-cream',
+        description: 'Rich mango kulfa made with real Alphonso mango pulp and cream.',
+        price: 250,
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80',
+        sizes: [
+            { name: 'Single Scoop', priceModifier: 0 },
+            { name: 'Double Scoop', priceModifier: 150 },
+            { name: 'Triple Scoop', priceModifier: 300 }
+        ]
+    },
+    {
+        id: 19,
+        name: 'Malai Kulfa',
+        category: 'ice-cream',
+        description: 'Traditional malai kulfa with cardamom, rose water, and slivered almonds.',
+        price: 280,
+        image: 'https://images.unsplash.com/photo-1570197785657-d9fe21c8cff0?w=400&q=80',
+        sizes: [
+            { name: 'Single Scoop', priceModifier: 0 },
+            { name: 'Double Scoop', priceModifier: 150 },
+            { name: 'Triple Scoop', priceModifier: 300 }
+        ]
+    },
+    {
+        id: 20,
+        name: 'Chocolate Cone',
+        category: 'ice-cream',
+        description: 'Crispy waffle cone loaded with rich chocolate ice cream and sprinkles.',
+        price: 200,
+        image: 'https://images.unsplash.com/photo-1557142046-c704a3adf364?w=400&q=80',
+        sizes: [
+            { name: 'Regular Cone', priceModifier: 0 },
+            { name: 'Large Cone', priceModifier: 100 },
+            { name: 'Waffle Cone', priceModifier: 150 }
+        ]
+    },
+    {
+        id: 21,
+        name: 'Strawberry Cone',
+        category: 'ice-cream',
+        description: 'Fresh strawberry ice cream in a crunchy cone topped with berry sauce.',
+        price: 200,
+        image: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80',
+        sizes: [
+            { name: 'Regular Cone', priceModifier: 0 },
+            { name: 'Large Cone', priceModifier: 100 },
+            { name: 'Waffle Cone', priceModifier: 150 }
+        ]
+    },
+    {
+        id: 22,
+        name: 'Chocolate Ice Cream Bar',
+        category: 'ice-cream',
+        description: 'Creamy vanilla ice cream bar coated in rich Belgian chocolate and nuts.',
+        price: 180,
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80',
+        sizes: [
+            { name: 'Standard Bar', priceModifier: 0 },
+            { name: 'Jumbo Bar', priceModifier: 100 },
+            { name: 'Family Pack (4 bars)', priceModifier: 350 }
+        ]
+    },
+    {
+        id: 23,
+        name: 'Mango Ice Cream Bar',
+        category: 'ice-cream',
+        description: 'Real mango ice cream bar with a tangy fruit coating and crunchy bits.',
+        price: 180,
+        image: 'https://images.unsplash.com/photo-1570197785657-d9fe21c8cff0?w=400&q=80',
+        sizes: [
+            { name: 'Standard Bar', priceModifier: 0 },
+            { name: 'Jumbo Bar', priceModifier: 100 },
+            { name: 'Family Pack (4 bars)', priceModifier: 350 }
+        ]
+    },
+    {
+        id: 24,
+        name: 'Assorted Ice Cream Jar',
+        category: 'ice-cream',
+        description: 'Premium ice cream jar with layers of your choice — pista, mango, chocolate & more.',
+        price: 350,
+        image: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80',
+        sizes: [
+            { name: 'Small Jar (250ml)', priceModifier: 0 },
+            { name: 'Medium Jar (500ml)', priceModifier: 200 },
+            { name: 'Large Jar (1L)', priceModifier: 450 }
+        ]
+    },
+    {
+        id: 25,
+        name: 'Family Ice Cream Jar',
+        category: 'ice-cream',
+        description: 'Giant jar packed with 3 layers of different ice cream flavors, nuts, and sauces.',
+        price: 650,
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80',
+        sizes: [
+            { name: 'Small Jar (250ml)', priceModifier: 0 },
+            { name: 'Medium Jar (500ml)', priceModifier: 200 },
+            { name: 'Large Jar (1L)', priceModifier: 450 }
+        ]
+    },
+    // ---- Chai Section ----
+    {
+        id: 26,
+        name: 'Karak Chai',
+        category: 'chai',
+        description: 'Strong, bold Pakistani karak chai brewed with cardamom and evaporated milk.',
+        price: 150,
+        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 27,
+        name: 'Doodh Patti',
+        category: 'chai',
+        description: 'Classic milk tea brewed strong with premium tea leaves and sweetened to perfection.',
+        price: 150,
+        image: 'https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 28,
+        name: 'Kashmiri Chai',
+        category: 'chai',
+        description: 'Beautiful pink-hued chai with crushed pistachios, almonds, and a hint of cardamom.',
+        price: 200,
+        image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 29,
+        name: 'Adrak Chai',
+        category: 'chai',
+        description: 'Ginger-infused chai with fresh grated ginger, warming spices, and creamy milk.',
+        price: 180,
+        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 30,
+        name: 'Elaichi Chai',
+        category: 'chai',
+        description: 'Fragrant cardamom chai with crushed green cardamom pods and a touch of honey.',
+        price: 180,
+        image: 'https://images.unsplash.com/photo-1563822249366-3efb23b8e0c9?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 31,
+        name: 'Sulemani Chai',
+        category: 'chai',
+        description: 'Light, aromatic lemon tea with a hint of mint — refreshing and soothing.',
+        price: 160,
+        image: 'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
+    },
+    {
+        id: 32,
+        name: 'Special Jaffeiz Chai',
+        category: 'chai',
+        description: 'Our signature blend — a secret mix of premium teas, spices, and condensed milk.',
+        price: 250,
+        image: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80',
+        sizes: [
+            { name: 'Small Cup', priceModifier: 0 },
+            { name: 'Medium Cup', priceModifier: 50 },
+            { name: 'Large Cup', priceModifier: 100 }
+        ]
     }
 ];
 
@@ -419,6 +672,14 @@ document.addEventListener('DOMContentLoaded', initPromoBanner);
 // 7. MENU RENDERING & FILTERING
 // ================================================================
 
+/** Map category keys to display labels */
+const categoryLabels = {
+    'pakistani': 'Pakistani Meal',
+    'drinks': 'Drink',
+    'ice-cream': 'Ice Cream',
+    'chai': 'Chai'
+};
+
 function initMenu() {
     const menuGrid = document.getElementById('menu-grid');
     const filterBtns = document.querySelectorAll('.filter-btn');
@@ -440,12 +701,13 @@ function initMenu() {
             card.dataset.id = item.id;
 
             const priceFormatted = 'Rs. ' + item.price.toLocaleString('en-PK');
+            const label = categoryLabels[item.category] || item.category;
 
             card.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="menu-item-image" loading="lazy" />
                 <div class="menu-item-info">
                     <h3 class="menu-item-name">${item.name}</h3>
-                    <p class="menu-item-category">${item.category === 'pakistani' ? 'Pakistani Meal' : 'Drink'}</p>
+                    <p class="menu-item-category">${label}</p>
                     <p class="menu-item-description">${item.description}</p>
                     <div class="menu-item-footer">
                         <span class="menu-item-price">${priceFormatted}</span>
@@ -516,9 +778,47 @@ function openMealModal(id) {
     document.getElementById('meal-modal-img').src = meal.image;
     document.getElementById('meal-modal-img').alt = meal.name;
     document.getElementById('meal-modal-name').textContent = meal.name;
-    document.getElementById('meal-modal-category').textContent = meal.category === 'pakistani' ? 'Pakistani Meal' : 'Drink';
+    const label = categoryLabels[meal.category] || meal.category;
+    document.getElementById('meal-modal-category').textContent = label;
     document.getElementById('meal-modal-price').textContent = formatPKR(meal.price);
     document.getElementById('meal-modal-desc').textContent = meal.description;
+
+    // Handle size selector visibility
+    const sizeGroup = document.getElementById('size-selector-group');
+    if (meal.sizes && meal.sizes.length > 0) {
+        sizeGroup.style.display = 'block';
+        const sizeSelect = document.getElementById('meal-size');
+        sizeSelect.innerHTML = '';
+        meal.sizes.forEach((size, idx) => {
+            const option = document.createElement('option');
+            option.value = idx;
+            option.textContent = size.name + (size.priceModifier > 0 ? ' (+Rs. ' + size.priceModifier + ')' : '');
+            sizeSelect.appendChild(option);
+        });
+        sizeSelect.value = '0';
+    } else {
+        sizeGroup.style.display = 'none';
+    }
+
+    // Show/hide spice options based on category
+    const spiceGroup = document.querySelector('.customization-group .spice-options')?.closest('.customization-group');
+    if (spiceGroup) {
+        if (meal.category === 'pakistani') {
+            spiceGroup.style.display = 'block';
+        } else {
+            spiceGroup.style.display = 'none';
+        }
+    }
+
+    // Show/hide extras based on category
+    const extrasGroup = document.querySelector('.customization-group .extras-options')?.closest('.customization-group');
+    if (extrasGroup) {
+        if (meal.category === 'pakistani') {
+            extrasGroup.style.display = 'block';
+        } else {
+            extrasGroup.style.display = 'none';
+        }
+    }
 
     updateMealModalTotal();
     modal.style.display = 'flex';
@@ -542,7 +842,18 @@ function updateMealModalTotal() {
     document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]:checked').forEach(cb => {
         extrasTotal += extrasPricing[cb.value] || 0;
     });
-    const total = (meal.price + extrasTotal) * qty;
+
+    // Add size price modifier
+    let sizeModifier = 0;
+    const sizeSelect = document.getElementById('meal-size');
+    if (sizeSelect && meal.sizes && meal.sizes.length > 0) {
+        const selectedIdx = parseInt(sizeSelect.value);
+        if (!isNaN(selectedIdx) && meal.sizes[selectedIdx]) {
+            sizeModifier = meal.sizes[selectedIdx].priceModifier;
+        }
+    }
+
+    const total = (meal.price + extrasTotal + sizeModifier) * qty;
     document.getElementById('meal-modal-total-price').textContent = formatPKR(total);
 }
 
@@ -562,14 +873,38 @@ function addMealToCart() {
     let extrasTotal = 0;
     extras.forEach(ext => { extrasTotal += extrasPricing[ext] || 0; });
 
+    // Get selected size
+    let selectedSize = null;
+    let sizeModifier = 0;
+    const sizeSelect = document.getElementById('meal-size');
+    if (sizeSelect && meal.sizes && meal.sizes.length > 0) {
+        const selectedIdx = parseInt(sizeSelect.value);
+        if (!isNaN(selectedIdx) && meal.sizes[selectedIdx]) {
+            selectedSize = meal.sizes[selectedIdx].name;
+            sizeModifier = meal.sizes[selectedIdx].priceModifier;
+        }
+    }
+
     for (let i = 0; i < qty; i++) {
-        const existing = cart.find(item => item.id === currentMealId && item.spice === spice && item.instructions === instructions && JSON.stringify(item.extras) === JSON.stringify(extras));
+        const existing = cart.find(item =>
+            item.id === currentMealId &&
+            item.spice === spice &&
+            item.instructions === instructions &&
+            JSON.stringify(item.extras) === JSON.stringify(extras) &&
+            item.size === selectedSize
+        );
         if (existing) {
             existing.quantity += 1;
         } else {
             cart.push({
-                id: currentMealId, name: meal.name, price: meal.price + extrasTotal, quantity: 1,
-                spice: spice, extras: extras, instructions: instructions
+                id: currentMealId,
+                name: meal.name + (selectedSize ? ' (' + selectedSize + ')' : ''),
+                price: meal.price + extrasTotal + sizeModifier,
+                quantity: 1,
+                spice: spice,
+                extras: extras,
+                instructions: instructions,
+                size: selectedSize
             });
         }
     }
@@ -600,6 +935,12 @@ function initMealModal() {
     document.querySelectorAll('#meal-modal .extras-options input[type="checkbox"]').forEach(cb => {
         cb.addEventListener('change', updateMealModalTotal);
     });
+
+    // Size selector change listener
+    const sizeSelect = document.getElementById('meal-size');
+    if (sizeSelect) {
+        sizeSelect.addEventListener('change', updateMealModalTotal);
+    }
 
     const addBtn = document.getElementById('meal-modal-add-btn');
     if (addBtn) addBtn.addEventListener('click', addMealToCart);
