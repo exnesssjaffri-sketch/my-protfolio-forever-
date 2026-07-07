@@ -21,7 +21,7 @@ const menuData = [
         category: 'pakistani',
         description: 'Fragrant basmati rice layered with tender chicken, aromatic spices, and saffron.',
         price: 650,
-        image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?biryani,rice,chicken'
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const menuData = [
         category: 'pakistani',
         description: 'Slow-cooked tender beef in a rich, creamy yogurt and cashew gravy.',
         price: 750,
-        image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?korma,curry,beef'
     },
     {
         id: 3,
@@ -37,7 +37,7 @@ const menuData = [
         category: 'pakistani',
         description: 'Sizzling wok-cooked chicken with tomatoes, ginger, and green chilies.',
         price: 700,
-        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?chicken,curry,gravy'
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const menuData = [
         category: 'pakistani',
         description: 'Fragrant rice with tender lamb, caramelized onions, and warm spices.',
         price: 800,
-        image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?pulao,rice,lamb'
     },
     {
         id: 5,
@@ -53,7 +53,7 @@ const menuData = [
         category: 'pakistani',
         description: 'Comforting lentils simmered with garlic and cumin, served over steamed rice.',
         price: 400,
-        image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?lentils,dal,rice'
     },
     {
         id: 6,
@@ -61,7 +61,282 @@ const menuData = [
         category: 'pakistani',
         description: 'Spiced minced meat skewers grilled to perfection on the tandoor.',
         price: 550,
-        image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&q=80'
+        image: 'https://source.unsplash.com/400x300/?kebab,grilled,meat-skewers'
+    },
+    // ---- Desi (Pakistani Household) ----
+    {
+        id: 49,
+        name: 'Besan Ki Roti',
+        category: 'desi',
+        description: 'Traditional gram flour flatbread served with spicy lal chatni — a rustic Pakistani household staple.',
+        price: 250,
+        image: 'https://source.unsplash.com/400x300/?roti,flatbread,chapati'
+    },
+    {
+        id: 50,
+        name: 'Spicy Lal Chatni',
+        category: 'desi',
+        description: 'Fiery red chili chutney made with fresh red chilies, garlic, and tangy tamarind — the perfect accompaniment.',
+        price: 100,
+        image: 'https://source.unsplash.com/400x300/?chutney,sauce,red-chili'
+    },
+    {
+        id: 51,
+        name: 'Aloo Ki Tarkari',
+        category: 'desi',
+        description: 'Comforting potato curry cooked with turmeric, cumin, and fresh coriander — a beloved desi ghar ka khana.',
+        price: 300,
+        image: 'https://source.unsplash.com/400x300/?potato,curry,vegetable'
+    },
+    {
+        id: 52,
+        name: 'Aloo Ke Parathe',
+        category: 'desi',
+        description: 'Stuffed whole wheat flatbreads filled with spiced mashed potatoes, pan-fried to golden perfection.',
+        price: 350,
+        image: 'https://source.unsplash.com/400x300/?paratha,flatbread,stuffed-bread'
+    },
+    {
+        id: 53,
+        name: 'Bhindi Ki Sabzi',
+        category: 'desi',
+        description: 'Tender okra stir-fried with onions, tomatoes, and aromatic spices — a classic Pakistani vegetable dish.',
+        price: 280,
+        image: 'https://source.unsplash.com/400x300/?okra,green-vegetables,cooking'
+    },
+    {
+        id: 54,
+        name: 'Baingan Ki Sabzi',
+        category: 'desi',
+        description: 'Smoky eggplant curry simmered with tomatoes, garlic, and traditional spices — pure desi comfort.',
+        price: 280,
+        image: 'https://source.unsplash.com/400x300/?eggplant,brinjal,roasted'
+    },
+    {
+        id: 55,
+        name: 'Roti (Tandoori)',
+        category: 'desi',
+        description: 'Freshly baked tandoori whole wheat flatbread — soft, fluffy, and slightly charred.',
+        price: 50,
+        image: 'https://source.unsplash.com/400x300/?tandoori-bread,naan,indian-bread'
+    },
+    {
+        id: 56,
+        name: 'Lassi (Sweet / Salty)',
+        category: 'desi',
+        description: 'Traditional yogurt-based drink — choose sweet with cardamom or salty with roasted cumin.',
+        price: 200,
+        image: 'https://source.unsplash.com/400x300/?lassi,yogurt,drink,milkshake'
+    },
+    // ---- Pizzas ----
+    {
+        id: 33,
+        name: 'Chicken Fajita Pizza',
+        category: 'pizza',
+        description: 'Grilled chicken, bell peppers, onions, jalapeños, and melted mozzarella on a crispy crust.',
+        price: 650,
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 34,
+        name: 'Pepperoni Pizza',
+        category: 'pizza',
+        description: 'Classic pepperoni slices with rich tomato sauce and gooey mozzarella cheese.',
+        price: 600,
+        image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 35,
+        name: 'BBQ Chicken Pizza',
+        category: 'pizza',
+        description: 'Tangy BBQ sauce base topped with grilled chicken, red onions, cilantro, and cheese.',
+        price: 700,
+        image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 36,
+        name: 'Margherita Pizza',
+        category: 'pizza',
+        description: 'Simple and elegant — fresh mozzarella, basil, and tomato sauce on a thin, crispy base.',
+        price: 500,
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 37,
+        name: 'Supreme Pizza',
+        category: 'pizza',
+        description: 'Loaded with pepperoni, sausage, bell peppers, onions, olives, mushrooms, and extra cheese.',
+        price: 750,
+        image: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 38,
+        name: 'Cheese Lovers Pizza',
+        category: 'pizza',
+        description: 'Four-cheese blend of mozzarella, cheddar, parmesan, and feta on a garlic butter base.',
+        price: 550,
+        image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 39,
+        name: 'Veggie Pizza',
+        category: 'pizza',
+        description: 'Garden-fresh mushrooms, bell peppers, onions, tomatoes, olives, and spinach with cheese.',
+        price: 450,
+        image: 'https://images.unsplash.com/photo-1576458088443-04a19bb13da6?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    {
+        id: 40,
+        name: 'Spicy Beef Pizza',
+        category: 'pizza',
+        description: 'Seasoned minced beef with jalapeños, chili flakes, onions, and melted mozzarella.',
+        price: 680,
+        image: 'https://images.unsplash.com/photo-1593504049359-74330189a345?w=400&q=80',
+        sizes: [
+            { name: 'Small (8")', priceModifier: 0 },
+            { name: 'Medium (12")', priceModifier: 300 },
+            { name: 'Large (16")', priceModifier: 600 }
+        ]
+    },
+    // ---- Burgers ----
+    {
+        id: 41,
+        name: 'Zinger Burger',
+        category: 'burger',
+        description: 'Crispy fried chicken fillet with lettuce, mayo, and tangy sauce in a sesame bun.',
+        price: 350,
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 42,
+        name: 'Beef Burger',
+        category: 'burger',
+        description: 'Juicy grilled beef patty with lettuce, tomato, onion rings, and our secret sauce.',
+        price: 400,
+        image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 43,
+        name: 'Chicken Burger',
+        category: 'burger',
+        description: 'Grilled chicken breast marinated in herbs, with fresh lettuce, tomato, and garlic mayo.',
+        price: 350,
+        image: 'https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 44,
+        name: 'Double Cheese Burger',
+        category: 'burger',
+        description: 'Two juicy beef patties with double cheddar cheese, pickles, and special sauce.',
+        price: 500,
+        image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 45,
+        name: 'BBQ Bacon Burger',
+        category: 'burger',
+        description: 'Smoky bacon strips, caramelized onions, cheddar cheese, and BBQ sauce on a brioche bun.',
+        price: 450,
+        image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 46,
+        name: 'Crispy Chicken Burger',
+        category: 'burger',
+        description: 'Extra-crispy buttermilk chicken tenders, coleslaw, and ranch dressing in a toasted bun.',
+        price: 380,
+        image: 'https://images.unsplash.com/photo-1586816001966-79b736744398?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 47,
+        name: 'Mushroom Swiss Burger',
+        category: 'burger',
+        description: 'Sautéed mushrooms, Swiss cheese, garlic aioli, and arugula on a gourmet beef patty.',
+        price: 420,
+        image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
+    },
+    {
+        id: 48,
+        name: 'Jaffeiz Special Burger',
+        category: 'burger',
+        description: 'Our signature masterpiece — Wagyu beef, truffle aioli, caramelized onions, rocket, and aged cheddar.',
+        price: 550,
+        image: 'https://images.unsplash.com/photo-1551782450-2132a4ab21d8?w=400&q=80',
+        sizes: [
+            { name: 'Single Patty', priceModifier: 0 },
+            { name: 'Double Patty', priceModifier: 200 },
+            { name: 'Triple Patty', priceModifier: 400 }
+        ]
     },
     // ---- Drinks (Soft flavors, no spicy, no chai) ----
     {
@@ -407,21 +682,21 @@ const reviewsData = [
         location: 'London, UK',
         avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80',
         stars: 5,
-        text: 'I\'ve traveled the world and tasted cuisine from every corner, but Jaffeiz holds a special place in my heart. The Beef Korma is the best I\'ve ever had — rich, creamy, and packed with flavor. The worldwide delivery is a game-changer. My family in London gets Jaffeiz delivered weekly now!'
+        text: 'I\'ve traveled the world and tasted cuisine from every corner, but Jaffeiz holds a special place in my heart. Their pizzas are outstanding — the Supreme Pizza is hands-down the best I\'ve had outside Italy. The worldwide delivery is a game-changer. My family in London gets Jaffeiz delivered weekly now!'
     },
     {
         name: 'Priya Sharma',
         location: 'Mumbai, India',
         avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80',
         stars: 5,
-        text: 'Jaffeiz is not just a restaurant; it\'s an experience. I booked the Romantic Couple dinner for our anniversary and it was magical. The ambiance, the service, the food — every detail was impeccable. Haider Jaffri has created something truly special. We\'ll be coming back every year!'
+        text: 'Jaffeiz is not just a restaurant; it\'s an experience. I booked the Romantic Couple dinner for our anniversary and it was magical. The ambiance, the service, the food — every detail was impeccable. Their Zinger Burger and Karak Chai are absolute must-tries! Haider Jaffri has created something truly special.'
     },
     {
         name: 'Ahmed Hassan',
         location: 'Karachi, Pakistan',
         avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80',
         stars: 5,
-        text: 'Being from Karachi, I know good Pakistani food. Jaffeiz exceeds every expectation. Their Karahi is legendary — cooked exactly the way it should be. The FIFA World Cup promo was a nice touch too! 20% off with FIFA2026 code made our family feast even sweeter. Highly recommended!'
+        text: 'Being from Karachi, I know good food. Jaffeiz exceeds every expectation. Their Chicken Karahi is legendary, the BBQ Chicken Pizza is divine, and the Mango Kulfa is the perfect dessert. The FIFA World Cup promo with 20% off made our family feast even sweeter. Highly recommended!'
     }
 ];
 
@@ -434,11 +709,10 @@ window.addEventListener('load', () => {
     if (loadingScreen) {
         setTimeout(() => {
             loadingScreen.classList.add('hidden');
-            // Remove from DOM after transition
             setTimeout(() => {
                 loadingScreen.style.display = 'none';
             }, 600);
-        }, 2000); // 2 second loading screen
+        }, 2000);
     }
 });
 
@@ -449,7 +723,6 @@ window.addEventListener('load', () => {
 function initParticles() {
     const canvas = document.getElementById('particle-canvas');
     if (!canvas) return;
-
     const ctx = canvas.getContext('2d');
     let particles = [];
     let animationId = null;
@@ -463,10 +736,7 @@ function initParticles() {
     window.addEventListener('resize', resizeCanvas);
 
     class Particle {
-        constructor() {
-            this.reset();
-        }
-
+        constructor() { this.reset(); }
         reset() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
@@ -478,22 +748,16 @@ function initParticles() {
             this.pulseDir = 1;
             this.color = `rgba(212, 175, 55, ${this.opacity})`;
         }
-
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-
-            // Pulse size for micro interaction
             this.size += this.pulse * this.pulseDir;
             if (this.size > 5 || this.size < 1) this.pulseDir *= -1;
-
-            // Wrap around edges
             if (this.x < 0) this.x = canvas.width;
             if (this.x > canvas.width) this.x = 0;
             if (this.y < 0) this.y = canvas.height;
             if (this.y > canvas.height) this.y = 0;
         }
-
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -502,21 +766,15 @@ function initParticles() {
         }
     }
 
-    // Create particles based on screen size
     const particleCount = Math.min(Math.floor(canvas.width * canvas.height / 12000), 120);
+    for (let i = 0; i < particleCount; i++) particles.push(new Particle());
 
-    for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-    }
-
-    // Connection lines between nearby particles
     function drawConnections() {
         for (let i = 0; i < particles.length; i++) {
             for (let j = i + 1; j < particles.length; j++) {
                 const dx = particles[i].x - particles[j].x;
                 const dy = particles[i].y - particles[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-
                 if (distance < 150) {
                     const opacity = (1 - distance / 150) * 0.2;
                     ctx.beginPath();
@@ -532,22 +790,13 @@ function initParticles() {
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        particles.forEach(p => {
-            p.update();
-            p.draw();
-        });
-
+        particles.forEach(p => { p.update(); p.draw(); });
         drawConnections();
-
         animationId = requestAnimationFrame(animate);
     }
 
     animate();
-
-    window.addEventListener('beforeunload', () => {
-        if (animationId) cancelAnimationFrame(animationId);
-    });
+    window.addEventListener('beforeunload', () => { if (animationId) cancelAnimationFrame(animationId); });
 }
 
 document.addEventListener('DOMContentLoaded', initParticles);
@@ -559,36 +808,21 @@ document.addEventListener('DOMContentLoaded', initParticles);
 function initTypingEffect() {
     const headingEl = document.getElementById('hero-heading');
     if (!headingEl) return;
-
     const text = 'Welcome to Jaffeiz – A World of Flavor Awaits.';
-    let index = 0;
-    let isDeleting = false;
-    let speed = 80;
+    let index = 0, isDeleting = false, speed = 80;
 
     function type() {
         if (!isDeleting) {
             headingEl.textContent = text.slice(0, index);
             index++;
-            if (index > text.length) {
-                isDeleting = true;
-                speed = 40;
-                setTimeout(type, 2000);
-                return;
-            }
+            if (index > text.length) { isDeleting = true; speed = 40; setTimeout(type, 2000); return; }
         } else {
             headingEl.textContent = text.slice(0, index);
             index--;
-            if (index < 0) {
-                isDeleting = false;
-                index = 0;
-                speed = 80;
-                setTimeout(type, 500);
-                return;
-            }
+            if (index < 0) { isDeleting = false; index = 0; speed = 80; setTimeout(type, 500); return; }
         }
         setTimeout(type, speed);
     }
-
     setTimeout(type, 2500);
 }
 
@@ -605,11 +839,7 @@ function initNavigation() {
     const navLinkItems = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+        navbar.classList.toggle('scrolled', window.scrollY > 100);
     });
 
     if (navToggle) {
@@ -627,7 +857,6 @@ function initNavigation() {
     });
 
     const sections = document.querySelectorAll('section[id]');
-
     function highlightNav() {
         let current = '';
         sections.forEach(section => {
@@ -638,13 +867,9 @@ function initNavigation() {
             }
         });
         navLinkItems.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
     }
-
     window.addEventListener('scroll', highlightNav);
 }
 
@@ -675,6 +900,9 @@ document.addEventListener('DOMContentLoaded', initPromoBanner);
 /** Map category keys to display labels */
 const categoryLabels = {
     'pakistani': 'Pakistani Meal',
+    'desi': 'Desi',
+    'pizza': 'Pizza',
+    'burger': 'Burger',
     'drinks': 'Drink',
     'ice-cream': 'Ice Cream',
     'chai': 'Chai'
@@ -800,24 +1028,16 @@ function openMealModal(id) {
         sizeGroup.style.display = 'none';
     }
 
-    // Show/hide spice options based on category
+    // Show/hide spice options based on category — for Pakistani & Desi meals
     const spiceGroup = document.querySelector('.customization-group .spice-options')?.closest('.customization-group');
     if (spiceGroup) {
-        if (meal.category === 'pakistani') {
-            spiceGroup.style.display = 'block';
-        } else {
-            spiceGroup.style.display = 'none';
-        }
+        spiceGroup.style.display = (meal.category === 'pakistani' || meal.category === 'desi') ? 'block' : 'none';
     }
 
-    // Show/hide extras based on category
+    // Show/hide extras based on category — for Pakistani & Desi meals
     const extrasGroup = document.querySelector('.customization-group .extras-options')?.closest('.customization-group');
     if (extrasGroup) {
-        if (meal.category === 'pakistani') {
-            extrasGroup.style.display = 'block';
-        } else {
-            extrasGroup.style.display = 'none';
-        }
+        extrasGroup.style.display = (meal.category === 'pakistani' || meal.category === 'desi') ? 'block' : 'none';
     }
 
     updateMealModalTotal();
@@ -843,7 +1063,6 @@ function updateMealModalTotal() {
         extrasTotal += extrasPricing[cb.value] || 0;
     });
 
-    // Add size price modifier
     let sizeModifier = 0;
     const sizeSelect = document.getElementById('meal-size');
     if (sizeSelect && meal.sizes && meal.sizes.length > 0) {
@@ -873,7 +1092,6 @@ function addMealToCart() {
     let extrasTotal = 0;
     extras.forEach(ext => { extrasTotal += extrasPricing[ext] || 0; });
 
-    // Get selected size
     let selectedSize = null;
     let sizeModifier = 0;
     const sizeSelect = document.getElementById('meal-size');
@@ -936,7 +1154,6 @@ function initMealModal() {
         cb.addEventListener('change', updateMealModalTotal);
     });
 
-    // Size selector change listener
     const sizeSelect = document.getElementById('meal-size');
     if (sizeSelect) {
         sizeSelect.addEventListener('change', updateMealModalTotal);
@@ -1302,9 +1519,7 @@ function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.fade-in, .slide-up');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); }
         });
     }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     animatedElements.forEach(el => observer.observe(el));
@@ -1372,11 +1587,7 @@ function initMouseFollower() {
     }
 
     animate();
-
-    // Hide on touch devices
-    if ('ontouchstart' in window) {
-        follower.style.display = 'none';
-    }
+    if ('ontouchstart' in window) { follower.style.display = 'none'; }
 }
 
 document.addEventListener('DOMContentLoaded', initMouseFollower);
@@ -1397,17 +1608,12 @@ function initAnimatedCounters() {
                 const duration = parseInt(el.dataset.duration) || 2000;
                 const suffix = el.dataset.suffix || '';
                 const step = Math.max(1, Math.floor(target / (duration / 16)));
-
                 let current = 0;
                 const timer = setInterval(() => {
                     current += step;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
+                    if (current >= target) { current = target; clearInterval(timer); }
                     el.textContent = current.toLocaleString('en-PK') + suffix;
                 }, 16);
-
                 observer.unobserve(el);
             }
         });
