@@ -137,6 +137,129 @@ const menuData = [
         description: 'Traditional kulfi-inspired creamy drink with pistachio and cardamom notes.',
         price: 5.99,
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
+    },
+    // ---- Pizzas ----
+    {
+        id: 17,
+        name: 'Margherita Pizza',
+        category: 'pizza',
+        description: 'Classic wood-fired Margherita with San Marzano tomatoes, fresh mozzarella, and basil.',
+        price: 11.99,
+        image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80'
+    },
+    {
+        id: 18,
+        name: 'Pepperoni Pizza',
+        category: 'pizza',
+        description: 'Loaded with spicy pepperoni, melted mozzarella, and tangy tomato sauce on a crispy crust.',
+        price: 13.99,
+        image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80'
+    },
+    {
+        id: 19,
+        name: 'BBQ Chicken Pizza',
+        category: 'pizza',
+        description: 'Smoky BBQ chicken, red onions, cilantro, and a blend of cheeses on a hand-tossed crust.',
+        price: 14.99,
+        image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80'
+    },
+    {
+        id: 20,
+        name: 'Veggie Supreme Pizza',
+        category: 'pizza',
+        description: 'Colorful bell peppers, mushrooms, olives, onions, and fresh tomatoes with mozzarella.',
+        price: 12.49,
+        image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=400&q=80'
+    },
+    {
+        id: 21,
+        name: 'Fiesta Pizza',
+        category: 'pizza',
+        description: 'Spicy chorizo, jalapeños, bell peppers, and pepper jack cheese — a flavor explosion!',
+        price: 14.49,
+        image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80'
+    },
+    // ---- Burgers ----
+    {
+        id: 22,
+        name: 'Classic Cheeseburger',
+        category: 'burger',
+        description: 'Juicy beef patty with melted cheddar, lettuce, tomato, and our secret sauce on a brioche bun.',
+        price: 9.99,
+        image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80'
+    },
+    {
+        id: 23,
+        name: 'Smoky BBQ Burger',
+        category: 'burger',
+        description: 'Grilled beef patty topped with smoky BBQ sauce, crispy onion rings, and smoked gouda.',
+        price: 11.49,
+        image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&q=80'
+    },
+    {
+        id: 24,
+        name: 'Chicken Crisp Burger',
+        category: 'burger',
+        description: 'Crispy fried chicken fillet with lettuce, pickles, and creamy mayo in a toasted sesame bun.',
+        price: 10.49,
+        image: 'https://images.unsplash.com/photo-1606755962773-d3245690a8f8?w=400&q=80'
+    },
+    {
+        id: 25,
+        name: 'Double Bacon Beast',
+        category: 'burger',
+        description: 'Two beef patties, crispy bacon, cheddar, BBQ sauce, and onion jam — for the hungry!',
+        price: 13.99,
+        image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80'
+    },
+    {
+        id: 26,
+        name: 'Mushroom Swiss Burger',
+        category: 'burger',
+        description: 'Sauteed mushrooms, melted Swiss cheese, garlic aioli, and arugula on a artisan bun.',
+        price: 11.99,
+        image: 'https://images.unsplash.com/photo-1586816001966-79b736744398?w=400&q=80'
+    },
+    // ---- Ice Creams ----
+    {
+        id: 27,
+        name: 'Belgian Chocolate Dream',
+        category: 'ice-cream',
+        description: 'Rich Belgian chocolate ice cream with fudge swirls and chocolate shavings.',
+        price: 5.99,
+        image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80'
+    },
+    {
+        id: 28,
+        name: 'Mango Tango Sorbet',
+        category: 'ice-cream',
+        description: 'Vibrant mango sorbet made with Alphonso mangoes — dairy-free and refreshing.',
+        price: 4.99,
+        image: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80'
+    },
+    {
+        id: 29,
+        name: 'Pistachio Cardamom',
+        category: 'ice-cream',
+        description: 'Creamy pistachio ice cream with a hint of cardamom and crushed pistachio brittle.',
+        price: 5.49,
+        image: 'https://images.unsplash.com/photo-1505394033641-40f6ad2719bd?w=400&q=80'
+    },
+    {
+        id: 30,
+        name: 'Strawberry Cheesecake',
+        category: 'ice-cream',
+        description: 'Cream cheese ice cream with strawberry swirls and graham cracker crumbles.',
+        price: 5.99,
+        image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400&q=80'
+    },
+    {
+        id: 31,
+        name: 'Salted Caramel Crunch',
+        category: 'ice-cream',
+        description: 'Buttery caramel ice cream with sea salt flakes and crunchy caramelized pecans.',
+        price: 5.99,
+        image: 'https://images.unsplash.com/photo-1570197785657-899d33a730bb?w=400&q=80'
     }
 ];
 
@@ -455,11 +578,21 @@ function initMenu() {
             card.className = 'menu-item';
             card.style.animationDelay = `${index * 0.1}s`;
 
+            // Map category to display label
+            const categoryLabels = {
+                'pakistani': 'Pakistani Meal',
+                'drinks': 'Drink',
+                'pizza': 'Pizza',
+                'burger': 'Burger',
+                'ice-cream': 'Ice Cream'
+            };
+            const displayCategory = categoryLabels[item.category] || item.category;
+
             card.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="menu-item-image" loading="lazy" />
                 <div class="menu-item-info">
                     <h3 class="menu-item-name">${item.name}</h3>
-                    <p class="menu-item-category">${item.category === 'pakistani' ? 'Pakistani Meal' : 'Drink'}</p>
+                    <p class="menu-item-category">${displayCategory}</p>
                     <p class="menu-item-description">${item.description}</p>
                     <div class="menu-item-footer">
                         <span class="menu-item-price">$${item.price.toFixed(2)}</span>
@@ -1008,7 +1141,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ================================================================
-// 15. CONSOLE WELCOME MESSAGE
+// 15. IMAGE ERROR HANDLER — Fallback for broken images
+// ================================================================
+
+/**
+ * Generates a colored SVG placeholder as a data URI for broken images.
+ * Each category gets a unique color so users can still identify the type.
+ */
+function getFallbackImageDataURI(category) {
+    const colors = {
+        'pakistani': '#c19a2b',
+        'desi': '#2d5a3f',
+        'pizza': '#dc3545',
+        'burger': '#e8c84a',
+        'drinks': '#17a2b8',
+        'ice-cream': '#e83e8c',
+        'chai': '#6f42c1',
+        'default': '#c19a2b'
+    };
+    const color = colors[category] || colors['default'];
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+        <rect width="400" height="300" fill="${color}" opacity="0.2"/>
+        <text x="200" y="140" text-anchor="middle" font-family="Arial" font-size="48" fill="${color}">🍽️</text>
+        <text x="200" y="180" text-anchor="middle" font-family="Arial" font-size="14" fill="${color}">Jaffeiz Restaurant</text>
+    </svg>`;
+    return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+
+/**
+ * Global image error handler — replaces any broken <img> with a fallback.
+ */
+function handleImageError(imgElement) {
+    if (imgElement.dataset.fallbackSet) return; // prevent infinite loop
+    imgElement.dataset.fallbackSet = 'true';
+    
+    // Try to determine category from parent elements
+    let category = 'default';
+    const parent = imgElement.closest('.menu-item');
+    if (parent) {
+        const catEl = parent.querySelector('.menu-item-category');
+        if (catEl) {
+            const catText = catEl.textContent.toLowerCase().replace(/\s+/g, '');
+            const catMap = { 'pakistanimeal':'pakistani', 'desi':'desi', 'pizza':'pizza', 'burger':'burger', 'drink':'drinks', 'icecream':'ice-cream', 'chai':'chai' };
+            category = catMap[catText] || 'default';
+        }
+    }
+    
+    imgElement.src = getFallbackImageDataURI(category);
+    imgElement.style.objectFit = 'contain';
+    imgElement.style.padding = '20px';
+    imgElement.style.backgroundColor = '#1a1a1a';
+}
+
+// Attach global image error listener
+document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') {
+        handleImageError(e.target);
+    }
+}, true);
+
+// Also handle images that may have already failed before the listener was attached
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img').forEach(function(img) {
+        if (img.complete && (img.naturalWidth === 0 || img.naturalHeight === 0)) {
+            handleImageError(img);
+        }
+    });
+});
+
+// ================================================================
+// 16. CONSOLE WELCOME MESSAGE
 // ================================================================
 
 console.log('%c🍽️ Jaffeiz Restaurant', 'font-size: 24px; font-weight: bold; color: #c19a2b;');

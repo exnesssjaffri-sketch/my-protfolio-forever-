@@ -432,7 +432,12 @@ img {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80') center/cover no-repeat fixed;
+    background: #0d0d0d;
+    background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
     z-index: 1;
 }
