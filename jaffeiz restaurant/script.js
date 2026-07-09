@@ -14,11 +14,14 @@
 
 /** Array of menu items for the categorized menu */
 const menuData = [
-    // ---- Pakistani Meals ----
+    // ---- Pakistani Meals (with plate sizes) ----
     {
         id: 1,
         name: 'Chicken Biryani',
         category: 'pakistani',
+        flavor: 'spicy',
+        sizes: ['Half Plate (Rs. 349)', 'Full Plate (Rs. 549)'],
+        sizePrices: { 'Half Plate (Rs. 349)': 349, 'Full Plate (Rs. 549)': 549 },
         description: 'Fragrant basmati rice layered with tender chicken, aromatic spices, and saffron.',
         price: 349,
         image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=400&q=80'
@@ -27,6 +30,9 @@ const menuData = [
         id: 2,
         name: 'Beef Korma',
         category: 'pakistani',
+        flavor: 'soft',
+        sizes: ['Half Plate (Rs. 449)', 'Full Plate (Rs. 699)'],
+        sizePrices: { 'Half Plate (Rs. 449)': 449, 'Full Plate (Rs. 699)': 699 },
         description: 'Slow-cooked tender beef in a rich, creamy yogurt and cashew gravy.',
         price: 449,
         image: 'https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80'
@@ -35,6 +41,9 @@ const menuData = [
         id: 3,
         name: 'Chicken Karahi',
         category: 'pakistani',
+        flavor: 'spicy',
+        sizes: ['Half Plate (Rs. 399)', 'Full Plate (Rs. 649)'],
+        sizePrices: { 'Half Plate (Rs. 399)': 399, 'Full Plate (Rs. 649)': 649 },
         description: 'Sizzling wok-cooked chicken with tomatoes, ginger, and green chilies.',
         price: 399,
         image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&q=80'
@@ -43,6 +52,9 @@ const menuData = [
         id: 4,
         name: 'Lamb Pulao',
         category: 'pakistani',
+        flavor: 'soft',
+        sizes: ['Half Plate (Rs. 499)', 'Full Plate (Rs. 799)'],
+        sizePrices: { 'Half Plate (Rs. 499)': 499, 'Full Plate (Rs. 799)': 799 },
         description: 'Fragrant rice with tender lamb, caramelized onions, and warm spices.',
         price: 499,
         image: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400&q=80'
@@ -51,6 +63,9 @@ const menuData = [
         id: 5,
         name: 'Daal Chawal',
         category: 'pakistani',
+        flavor: 'soft',
+        sizes: ['Half Plate (Rs. 249)', 'Full Plate (Rs. 399)'],
+        sizePrices: { 'Half Plate (Rs. 249)': 249, 'Full Plate (Rs. 399)': 399 },
         description: 'Comforting lentils simmered with garlic and cumin, served over steamed rice.',
         price: 249,
         image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&q=80'
@@ -59,15 +74,21 @@ const menuData = [
         id: 6,
         name: 'Seekh Kebab',
         category: 'pakistani',
+        flavor: 'spicy',
+        sizes: ['4 Pcs (Rs. 299)', '8 Pcs (Rs. 499)'],
+        sizePrices: { '4 Pcs (Rs. 299)': 299, '8 Pcs (Rs. 499)': 499 },
         description: 'Spiced minced meat skewers grilled to perfection on the tandoor.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400&q=80'
     },
-    // ---- Drinks ----
+    // ---- Drinks (with cup sizes) ----
     {
         id: 8,
         name: 'Espresso',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 149)', 'Large Cup (Rs. 249)'],
+        sizePrices: { 'Small Cup (Rs. 149)': 149, 'Large Cup (Rs. 249)': 249 },
         description: 'Rich, bold single-origin espresso shot. Pure energy in a cup.',
         price: 149,
         image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=400&q=80'
@@ -76,6 +97,9 @@ const menuData = [
         id: 9,
         name: 'Cappuccino',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 199)', 'Large Cup (Rs. 349)'],
+        sizePrices: { 'Small Cup (Rs. 199)': 199, 'Large Cup (Rs. 349)': 349 },
         description: 'Velvety espresso with steamed milk foam and a dusting of cocoa.',
         price: 199,
         image: 'https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80'
@@ -84,6 +108,9 @@ const menuData = [
         id: 10,
         name: 'Latte',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 249)', 'Large Cup (Rs. 399)'],
+        sizePrices: { 'Small Cup (Rs. 249)': 249, 'Large Cup (Rs. 399)': 399 },
         description: 'Smooth espresso with creamy steamed milk. Available in vanilla or caramel.',
         price: 249,
         image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80'
@@ -92,6 +119,9 @@ const menuData = [
         id: 11,
         name: 'Mango Milkshake',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 299)', 'Large Glass (Rs. 449)'],
+        sizePrices: { 'Regular Glass (Rs. 299)': 299, 'Large Glass (Rs. 449)': 449 },
         description: 'Thick, creamy milkshake made with fresh Alphonso mangoes.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
@@ -100,6 +130,9 @@ const menuData = [
         id: 12,
         name: 'Chocolate Milkshake',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 299)', 'Large Glass (Rs. 449)'],
+        sizePrices: { 'Regular Glass (Rs. 299)': 299, 'Large Glass (Rs. 449)': 449 },
         description: 'Decadent chocolate milkshake topped with whipped cream and shavings.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=400&q=80'
@@ -108,6 +141,9 @@ const menuData = [
         id: 13,
         name: 'Vanilla Ice Cream Shake',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 249)', 'Large Glass (Rs. 399)'],
+        sizePrices: { 'Regular Glass (Rs. 249)': 249, 'Large Glass (Rs. 399)': 399 },
         description: 'Creamy vanilla ice cream blended with milk for a smooth, classic shake.',
         price: 249,
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
@@ -116,6 +152,9 @@ const menuData = [
         id: 14,
         name: 'Strawberry Ice Cream Shake',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 299)', 'Large Glass (Rs. 449)'],
+        sizePrices: { 'Regular Glass (Rs. 299)': 299, 'Large Glass (Rs. 449)': 449 },
         description: 'Fresh strawberry ice cream shaken with milk and a touch of sweetness.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1505253758479-34fbd9f1a0d9?w=400&q=80'
@@ -124,6 +163,9 @@ const menuData = [
         id: 15,
         name: 'Mango Ice Cream Float',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 299)', 'Large Glass (Rs. 449)'],
+        sizePrices: { 'Regular Glass (Rs. 299)': 299, 'Large Glass (Rs. 449)': 449 },
         description: 'Mango ice cream served in chilled soda — a fruity, creamy float.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=400&q=80'
@@ -132,15 +174,21 @@ const menuData = [
         id: 16,
         name: 'Kulfi Cream',
         category: 'drinks',
+        flavor: 'soft',
+        sizes: ['Regular Glass (Rs. 349)', 'Large Glass (Rs. 549)'],
+        sizePrices: { 'Regular Glass (Rs. 349)': 349, 'Large Glass (Rs. 549)': 549 },
         description: 'Traditional kulfi-inspired creamy drink with pistachio and cardamom notes.',
         price: 349,
         image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80'
     },
-    // ---- Pizzas ----
+    // ---- Pizzas (with plate sizes) ----
     {
         id: 17,
         name: 'Margherita Pizza',
         category: 'pizza',
+        flavor: 'soft',
+        sizes: ['Medium (Rs. 499)', 'Large (Rs. 799)', 'Family (Rs. 1,199)'],
+        sizePrices: { 'Medium (Rs. 499)': 499, 'Large (Rs. 799)': 799, 'Family (Rs. 1,199)': 1199 },
         description: 'Classic wood-fired Margherita with San Marzano tomatoes, fresh mozzarella, and basil.',
         price: 499,
         image: 'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&q=80'
@@ -149,6 +197,9 @@ const menuData = [
         id: 18,
         name: 'Pepperoni Pizza',
         category: 'pizza',
+        flavor: 'spicy',
+        sizes: ['Medium (Rs. 599)', 'Large (Rs. 949)', 'Family (Rs. 1,399)'],
+        sizePrices: { 'Medium (Rs. 599)': 599, 'Large (Rs. 949)': 949, 'Family (Rs. 1,399)': 1399 },
         description: 'Loaded with spicy pepperoni, melted mozzarella, and tangy tomato sauce on a crispy crust.',
         price: 599,
         image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&q=80'
@@ -157,6 +208,9 @@ const menuData = [
         id: 19,
         name: 'BBQ Chicken Pizza',
         category: 'pizza',
+        flavor: 'spicy',
+        sizes: ['Medium (Rs. 699)', 'Large (Rs. 1,099)', 'Family (Rs. 1,599)'],
+        sizePrices: { 'Medium (Rs. 699)': 699, 'Large (Rs. 1,099)': 1099, 'Family (Rs. 1,599)': 1599 },
         description: 'Smoky BBQ chicken, red onions, cilantro, and a blend of cheeses on a hand-tossed crust.',
         price: 699,
         image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80'
@@ -165,6 +219,9 @@ const menuData = [
         id: 20,
         name: 'Veggie Supreme Pizza',
         category: 'pizza',
+        flavor: 'soft',
+        sizes: ['Medium (Rs. 549)', 'Large (Rs. 899)', 'Family (Rs. 1,299)'],
+        sizePrices: { 'Medium (Rs. 549)': 549, 'Large (Rs. 899)': 899, 'Family (Rs. 1,299)': 1299 },
         description: 'Colorful bell peppers, mushrooms, olives, onions, and fresh tomatoes with mozzarella.',
         price: 549,
         image: 'https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=400&q=80'
@@ -173,15 +230,21 @@ const menuData = [
         id: 21,
         name: 'Fiesta Pizza',
         category: 'pizza',
+        flavor: 'spicy',
+        sizes: ['Medium (Rs. 649)', 'Large (Rs. 999)', 'Family (Rs. 1,499)'],
+        sizePrices: { 'Medium (Rs. 649)': 649, 'Large (Rs. 999)': 999, 'Family (Rs. 1,499)': 1499 },
         description: 'Spicy chorizo, jalapeños, bell peppers, and pepper jack cheese — a flavor explosion!',
         price: 649,
         image: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400&q=80'
     },
-    // ---- Burgers ----
+    // ---- Burgers (with size options) ----
     {
         id: 22,
         name: 'Classic Cheeseburger',
         category: 'burger',
+        flavor: 'soft',
+        sizes: ['Single (Rs. 349)', 'Double (Rs. 549)'],
+        sizePrices: { 'Single (Rs. 349)': 349, 'Double (Rs. 549)': 549 },
         description: 'Juicy beef patty with melted cheddar, lettuce, tomato, and our secret sauce on a brioche bun.',
         price: 349,
         image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80'
@@ -190,6 +253,9 @@ const menuData = [
         id: 23,
         name: 'Smoky BBQ Burger',
         category: 'burger',
+        flavor: 'spicy',
+        sizes: ['Single (Rs. 449)', 'Double (Rs. 699)'],
+        sizePrices: { 'Single (Rs. 449)': 449, 'Double (Rs. 699)': 699 },
         description: 'Grilled beef patty topped with smoky BBQ sauce, crispy onion rings, and smoked gouda.',
         price: 449,
         image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400&q=80'
@@ -198,6 +264,9 @@ const menuData = [
         id: 24,
         name: 'Chicken Crisp Burger',
         category: 'burger',
+        flavor: 'soft',
+        sizes: ['Single (Rs. 399)', 'Double (Rs. 599)'],
+        sizePrices: { 'Single (Rs. 399)': 399, 'Double (Rs. 599)': 599 },
         description: 'Crispy fried chicken fillet with lettuce, pickles, and creamy mayo in a toasted sesame bun.',
         price: 399,
         image: 'https://images.unsplash.com/photo-1606755962773-d3245690a8f8?w=400&q=80'
@@ -206,6 +275,9 @@ const menuData = [
         id: 25,
         name: 'Double Bacon Beast',
         category: 'burger',
+        flavor: 'spicy',
+        sizes: ['Single (Rs. 599)', 'Triple (Rs. 899)'],
+        sizePrices: { 'Single (Rs. 599)': 599, 'Triple (Rs. 899)': 899 },
         description: 'Two beef patties, crispy bacon, cheddar, BBQ sauce, and onion jam — for the hungry!',
         price: 599,
         image: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400&q=80'
@@ -214,15 +286,21 @@ const menuData = [
         id: 26,
         name: 'Mushroom Swiss Burger',
         category: 'burger',
+        flavor: 'soft',
+        sizes: ['Single (Rs. 499)', 'Double (Rs. 749)'],
+        sizePrices: { 'Single (Rs. 499)': 499, 'Double (Rs. 749)': 749 },
         description: 'Sauteed mushrooms, melted Swiss cheese, garlic aioli, and arugula on a artisan bun.',
         price: 499,
         image: 'https://images.unsplash.com/photo-1586816001966-79b736744398?w=400&q=80'
     },
-    // ---- Ice Creams ----
+    // ---- Ice Creams (with cup sizes) ----
     {
         id: 27,
         name: 'Belgian Chocolate Dream',
         category: 'ice-cream',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 249)', 'Medium Cup (Rs. 399)', 'Family Tub (Rs. 699)'],
+        sizePrices: { 'Small Cup (Rs. 249)': 249, 'Medium Cup (Rs. 399)': 399, 'Family Tub (Rs. 699)': 699 },
         description: 'Rich Belgian chocolate ice cream with fudge swirls and chocolate shavings.',
         price: 249,
         image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=80'
@@ -231,6 +309,9 @@ const menuData = [
         id: 28,
         name: 'Mango Tango Sorbet',
         category: 'ice-cream',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 199)', 'Medium Cup (Rs. 349)', 'Family Tub (Rs. 599)'],
+        sizePrices: { 'Small Cup (Rs. 199)': 199, 'Medium Cup (Rs. 349)': 349, 'Family Tub (Rs. 599)': 599 },
         description: 'Vibrant mango sorbet made with Alphonso mangoes — dairy-free and refreshing.',
         price: 199,
         image: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=400&q=80'
@@ -239,6 +320,9 @@ const menuData = [
         id: 29,
         name: 'Pistachio Cardamom',
         category: 'ice-cream',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 249)', 'Medium Cup (Rs. 399)', 'Family Tub (Rs. 699)'],
+        sizePrices: { 'Small Cup (Rs. 249)': 249, 'Medium Cup (Rs. 399)': 399, 'Family Tub (Rs. 699)': 699 },
         description: 'Creamy pistachio ice cream with a hint of cardamom and crushed pistachio brittle.',
         price: 249,
         image: 'https://images.unsplash.com/photo-1505394033641-40f6ad2719bd?w=400&q=80'
@@ -247,6 +331,9 @@ const menuData = [
         id: 30,
         name: 'Strawberry Cheesecake',
         category: 'ice-cream',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 299)', 'Medium Cup (Rs. 449)', 'Family Tub (Rs. 799)'],
+        sizePrices: { 'Small Cup (Rs. 299)': 299, 'Medium Cup (Rs. 449)': 449, 'Family Tub (Rs. 799)': 799 },
         description: 'Cream cheese ice cream with strawberry swirls and graham cracker crumbles.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1488900128323-21503983a07e?w=400&q=80'
@@ -255,6 +342,9 @@ const menuData = [
         id: 31,
         name: 'Salted Caramel Crunch',
         category: 'ice-cream',
+        flavor: 'soft',
+        sizes: ['Small Cup (Rs. 299)', 'Medium Cup (Rs. 449)', 'Family Tub (Rs. 799)'],
+        sizePrices: { 'Small Cup (Rs. 299)': 299, 'Medium Cup (Rs. 449)': 449, 'Family Tub (Rs. 799)': 799 },
         description: 'Buttery caramel ice cream with sea salt flakes and crunchy caramelized pecans.',
         price: 299,
         image: 'https://images.unsplash.com/photo-1570197785657-899d33a730bb?w=400&q=80'
@@ -586,14 +676,40 @@ function initMenu() {
             };
             const displayCategory = categoryLabels[item.category] || item.category;
 
+            // Flavor badge
+            const flavorBadge = item.flavor === 'spicy'
+                ? '<span class="flavor-badge spicy">🌶️ Spicy</span>'
+                : '<span class="flavor-badge soft">😊 Soft</span>';
+
+            // Size selector HTML
+            let sizeSelectorHtml = '';
+            if (item.sizes && item.sizes.length > 0) {
+                sizeSelectorHtml = '<div class="size-selector">';
+                item.sizes.forEach((size, si) => {
+                    const selected = si === 0 ? 'checked' : '';
+                    const sizePrice = item.sizePrices[size];
+                    sizeSelectorHtml += `
+                        <label class="size-option ${si === 0 ? 'selected' : ''}">
+                            <input type="radio" name="size-${item.id}" value="${size}" data-price="${sizePrice}" ${selected}>
+                            <span class="size-label">${size}</span>
+                        </label>
+                    `;
+                });
+                sizeSelectorHtml += '</div>';
+            }
+
             card.innerHTML = `
                 <img src="${item.image}" alt="${item.name}" class="menu-item-image" loading="lazy" />
                 <div class="menu-item-info">
                     <h3 class="menu-item-name">${item.name}</h3>
-                    <p class="menu-item-category">${displayCategory}</p>
+                    <div class="menu-item-badges">
+                        <p class="menu-item-category">${displayCategory}</p>
+                        ${flavorBadge}
+                    </div>
                     <p class="menu-item-description">${item.description}</p>
+                    ${sizeSelectorHtml}
                     <div class="menu-item-footer">
-                        <span class="menu-item-price">Rs. ${item.price}</span>
+                        <span class="menu-item-price" data-base-price="${item.price}">Rs. ${item.price}</span>
                         <button class="add-to-cart-btn" data-id="${item.id}">Add to Cart</button>
                     </div>
                 </div>
@@ -602,12 +718,37 @@ function initMenu() {
             menuGrid.appendChild(card);
         });
 
-        // Attach add-to-cart event listeners to new buttons
+        // Attach size selector change events to update displayed price
+        document.querySelectorAll('.size-option input[type="radio"]').forEach(input => {
+            input.addEventListener('change', function() {
+                const parentCard = this.closest('.menu-item');
+                const priceSpan = parentCard.querySelector('.menu-item-price');
+                const newPrice = parseInt(this.dataset.price);
+                priceSpan.textContent = `Rs. ${newPrice.toLocaleString()}`;
+
+                // Update visual selection
+                parentCard.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('selected'));
+                this.closest('.size-option').classList.add('selected');
+            });
+        });
+
+        // Attach add-to-cart event listeners with size info
         document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
             btn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const id = parseInt(btn.dataset.id);
-                addToCart(id);
+                const parentCard = btn.closest('.menu-item');
+
+                // Get selected size
+                let selectedSize = null;
+                let sizePrice = null;
+                const sizeInput = parentCard.querySelector('.size-option input[type="radio"]:checked');
+                if (sizeInput) {
+                    selectedSize = sizeInput.value;
+                    sizePrice = parseInt(sizeInput.dataset.price);
+                }
+
+                addToCart(id, selectedSize, sizePrice);
             });
         });
     }
@@ -642,21 +783,30 @@ function findMenuItem(id) {
 }
 
 /** Add item to cart */
-function addToCart(id) {
-    const existing = cart.find(item => item.id === id);
+function addToCart(id, selectedSize = null, sizePrice = null) {
+    const menuItem = findMenuItem(id);
+    if (!menuItem) return;
+
+    // Build a unique key from id + size so different sizes are separate cart items
+    const sizeKey = selectedSize || 'default';
+    const cartKey = `${id}-${sizeKey}`;
+    const existing = cart.find(item => item.cartKey === cartKey);
+
+    const finalPrice = sizePrice || menuItem.price;
+    const displayName = selectedSize ? `${menuItem.name} (${selectedSize.replace(/ *\([^)]*\) */g, '').trim()})` : menuItem.name;
 
     if (existing) {
         existing.quantity += 1;
+        existing.price = finalPrice;
     } else {
-        const menuItem = findMenuItem(id);
-        if (menuItem) {
-            cart.push({
-                id: menuItem.id,
-                name: menuItem.name,
-                price: menuItem.price,
-                quantity: 1
-            });
-        }
+        cart.push({
+            cartKey: cartKey,
+            id: menuItem.id,
+            name: displayName,
+            price: finalPrice,
+            quantity: 1,
+            size: selectedSize
+        });
     }
 
     updateCartUI();
