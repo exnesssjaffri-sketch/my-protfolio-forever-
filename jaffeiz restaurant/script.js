@@ -824,19 +824,19 @@ function showAddFeedback() {
     }
 }
 
-/** Remove item from cart */
-function removeFromCart(id) {
-    cart = cart.filter(item => item.id !== id);
+/** Remove item from cart using cartKey */
+function removeFromCart(cartKey) {
+    cart = cart.filter(item => item.cartKey !== cartKey);
     updateCartUI();
 }
 
-/** Update item quantity */
-function updateQuantity(id, delta) {
-    const item = cart.find(i => i.id === id);
+/** Update item quantity using cartKey */
+function updateQuantity(cartKey, delta) {
+    const item = cart.find(i => i.cartKey === cartKey);
     if (item) {
         item.quantity += delta;
         if (item.quantity <= 0) {
-            removeFromCart(id);
+            removeFromCart(cartKey);
             return;
         }
     }
@@ -879,32 +879,32 @@ function updateCartUI() {
             <div class="cart-item">
                 <span class="cart-item-name">${item.name}</span>
                 <div class="cart-item-qty">
-                    <button class="qty-btn" data-id="${item.id}" data-delta="-1">−</button>
+                    <button class="qty-btn" data-cartkey="${item.cartKey}" data-delta="-1">−</button>
                     <span>${item.quantity}</span>
-                    <button class="qty-btn" data-id="${item.id}" data-delta="1">+</button>
+                    <button class="qty-btn" data-cartkey="${item.cartKey}" data-delta="1">+</button>
                 </div>
                 <span class="cart-item-price">Rs. ${itemTotal.toLocaleString()}</span>
-                <button class="cart-item-remove" data-id="${item.id}">&times;</button>
+                <button class="cart-item-remove" data-cartkey="${item.cartKey}">&times;</button>
             </div>
         `;
     });
 
     cartItems.innerHTML = html;
 
-    // Attach quantity button events
+    // Attach quantity button events using cartKey
     document.querySelectorAll('.qty-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-            const id = parseInt(btn.dataset.id);
+            const cartKey = btn.dataset.cartkey;
             const delta = parseInt(btn.dataset.delta);
-            updateQuantity(id, delta);
+            updateQuantity(cartKey, delta);
         });
     });
 
-    // Attach remove button events
+    // Attach remove button events using cartKey
     document.querySelectorAll('.cart-item-remove').forEach(btn => {
         btn.addEventListener('click', () => {
-            const id = parseInt(btn.dataset.id);
-            removeFromCart(id);
+            const cartKey = btn.dataset.cartkey;
+            removeFromCart(cartKey);
         });
     });
 
