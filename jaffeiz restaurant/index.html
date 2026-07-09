@@ -136,6 +136,39 @@
                     </div>
 
                     <button id="checkout-btn" class="btn btn-primary" disabled>Proceed to Checkout</button>
+
+                    <!-- Cart Billing Modal (hidden by default) -->
+                    <div id="cart-billing" class="cart-billing" style="display: none;">
+                        <h4 class="cart-billing-title">🧾 Order Billing</h4>
+                        <div id="cart-billing-summary" class="cart-billing-summary"></div>
+                        <form id="cart-billing-form">
+                            <div class="form-group">
+                                <label for="cart-delivery-name">Full Name</label>
+                                <input type="text" id="cart-delivery-name" placeholder="Enter your name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="cart-delivery-phone">Phone Number</label>
+                                <input type="tel" id="cart-delivery-phone" placeholder="03XX-XXXXXXX" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="cart-delivery-address">Delivery Address</label>
+                                <textarea id="cart-delivery-address" rows="2" placeholder="House #, Street, City" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="cart-payment-method">Payment Method</label>
+                                <select id="cart-payment-method">
+                                    <option value="cod">Cash on Delivery</option>
+                                    <option value="card">Credit / Debit Card</option>
+                                    <option value="jazzcash">JazzCash</option>
+                                    <option value="easypaisa">EasyPaisa</option>
+                                </select>
+                            </div>
+                            <div class="form-row" style="display: flex; gap: 10px; margin-top: 16px;">
+                                <button type="submit" class="btn btn-primary" style="flex: 1;">✅ Place Order</button>
+                                <button type="button" id="cart-billing-cancel" class="btn btn-secondary" style="flex: 0.5;">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
 
                 <!-- Delivery Info -->
